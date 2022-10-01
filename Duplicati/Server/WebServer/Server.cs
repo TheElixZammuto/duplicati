@@ -223,6 +223,9 @@ namespace Duplicati.Server.WebServer
 
             server.Add(new RESTHandler());
 
+            //TODO Conditionaly Enable
+            server.Add(new MetricsHandler());
+
             string webroot = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
             string install_webroot = System.IO.Path.Combine(Library.AutoUpdater.UpdaterManager.InstalledBaseDir, "webroot");
 
